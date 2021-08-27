@@ -1,1 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+    <title>Space Time Cube</title>
+	
+	<style>
+		.container-fluid{position:absolute;height:100%}object{width:100%;height:100%}
+		body{font-family: 'Poppins', sans-serif;}
+	</style>
+	
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#000 !important;color:#fff !important;">
+      <a class="navbar-brand" href="#" style="color:#fff !important;">Peta Kriminalitas</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#" onclick="jam()" style="color:#fff !important;">Jam <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#" onclick="tanggal()" style="color:#fff !important;">Tanggal</a>
+          <a class="nav-item nav-link" href="#" onclick="bulan()" style="color:#fff !important;">Bulan</a>
+        </div>
+      </div>
+    </nav>
+
+    <h2 class="text-center">PETA KRIMINALITAS TAHUN 2020 </h2><br>
+    <h2 class="text-center">Space Time Cube (STC) Visualization</h2>
+    <!-- <div id="content" class="mt-2"></div> -->
+    <div id="content" class="container-fluid">
+      <!-- Content here -->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+	
+		$(document).ready(function(){
+			tanggal();
+		});
+
+		function jam() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="kriminalitas_jam.html" ></object>';
+		}
+
+		function tanggal() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="kriminalitas_tanggal.html" ></object>';
+		}
+
+		function bulan() {
+			document.getElementById("content").innerHTML='<object type="text/html" data="kriminalitas_bulan.html" ></object>';
+		}
+
+    </script>
+  </body>
+</html>
